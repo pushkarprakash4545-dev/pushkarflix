@@ -2,7 +2,7 @@ import "./index.css";
 
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import Education from "./components/Education/Education";
+import Education from "./components/Education/education";
 import Projects from "./components/Projects/Projects";
 import Skills from "./components/Skills/Skills";
 import About from "./components/About/About";
