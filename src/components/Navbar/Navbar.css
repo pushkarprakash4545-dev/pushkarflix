@@ -1,0 +1,1046 @@
+/* ==========================================================
+                    NAVBAR FOUNDATION
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#E50914;
+
+    --primary-light:#ff3b45;
+
+    --glass:rgba(12,12,12,.55);
+
+    --glass-border:rgba(255,255,255,.08);
+
+    --text:#ffffff;
+
+    --text-secondary:#d2d2d2;
+
+    --shadow:
+    0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.navbar{
+
+    position:fixed;
+
+    left:50%;
+
+    top:20px;
+
+    transform:translateX(-50%);
+
+    width:min(95%,1450px);
+
+    height:82px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 26px;
+
+    border-radius:24px;
+
+    background:var(--glass);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--glass-border);
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    transition:
+
+    .45s cubic-bezier(.22,.61,.36,1);
+
+    z-index:9999;
+
+}
+
+/* ========================================================== */
+
+.navbar::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        rgba(255,255,255,.05),
+
+        transparent 45%,
+
+        rgba(255,255,255,.03)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/* ========================================================== */
+
+.navbar::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    right:-140px;
+
+    top:-140px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(229,9,20,.20),
+
+        transparent 70%
+
+    );
+
+    filter:blur(45px);
+
+    pointer-events:none;
+
+}
+
+/* ========================================================== */
+
+.glass-nav.top{
+
+    top:20px;
+
+}
+
+.glass-nav{
+
+    animation:
+
+    navbarEnter
+
+    .9s cubic-bezier(.22,.61,.36,1);
+
+}
+
+@keyframes navbarEnter{
+
+0%{
+
+opacity:0;
+
+transform:
+
+translateX(-50%)
+
+translateY(-30px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:
+
+translateX(-50%)
+
+translateY(0);
+
+}
+
+}
+
+/* ========================================================== */
+
+.navbar.scrolled{
+
+    top:12px;
+
+    background:
+
+    rgba(10,10,10,.78);
+
+    border-color:
+
+    rgba(255,255,255,.10);
+
+    box-shadow:
+
+    0 18px 60px rgba(0,0,0,.55);
+
+}
+
+/* ==========================================================
+                        LOGO
+========================================================== */
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    line-height:.82;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.35s;
+
+    z-index:5;
+
+}
+
+.logo:hover{
+
+    transform:
+
+    scale(1.05);
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    letter-spacing:5px;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+    margin-left:58px;
+
+    margin-top:5px;
+
+    font-size:18px;
+
+    font-weight:800;
+
+    letter-spacing:8px;
+
+}
+
+/* ========================================================== */
+
+.logo::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:45%;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.25),
+
+        transparent
+
+    );
+
+    animation:
+
+    logoShine
+
+    8s linear infinite;
+
+}
+
+@keyframes logoShine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:170%;
+
+}
+
+}
+/* ==========================================================
+                    NAVIGATION CONTAINER
+========================================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    list-style:none;
+
+    padding:8px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    box-shadow:
+
+    inset 0 1px rgba(255,255,255,.04),
+
+    0 8px 25px rgba(0,0,0,.18);
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/* ========================================================== */
+
+.nav-links li{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:13px 22px;
+
+    border-radius:999px;
+
+    color:#d9d9d9;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:
+
+    color .35s,
+
+    transform .35s,
+
+    background .35s,
+
+    box-shadow .35s;
+
+}
+
+/* ========================================================== */
+
+.nav-links li:hover{
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+}
+
+/* ========================================================== */
+
+.nav-links li::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:999px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.08),
+
+        rgba(255,255,255,.02)
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.nav-links li:hover::before{
+
+    opacity:1;
+
+}
+
+/* ========================================================== */
+
+.nav-links li::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:6px;
+
+    transform:
+
+    translateX(-50%)
+
+    scaleX(0);
+
+    width:55%;
+
+    height:2px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        var(--primary),
+
+        var(--primary-light)
+
+    );
+
+    transition:
+
+    transform .35s;
+
+}
+
+.nav-links li:hover::after{
+
+    transform:
+
+    translateX(-50%)
+
+    scaleX(1);
+
+}
+
+/* ==========================================================
+                    ACTIVE ITEM
+========================================================== */
+
+.nav-links li.active{
+
+    color:#fff;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-light)
+
+    );
+
+    box-shadow:
+
+    0 12px 28px rgba(229,9,20,.35),
+
+    inset 0 1px rgba(255,255,255,.18);
+
+}
+
+.nav-links li.active::after{
+
+    display:none;
+
+}
+
+.nav-links li.active:hover{
+
+    transform:
+
+    translateY(-3px)
+
+    scale(1.02);
+
+}
+
+/* ==========================================================
+                    RESUME BUTTON
+========================================================== */
+
+.resume-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    padding:15px 28px;
+
+    border-radius:999px;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-light)
+
+    );
+
+    box-shadow:
+
+    0 12px 30px rgba(229,9,20,.35);
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s;
+
+}
+
+/* ========================================================== */
+
+.resume-btn:hover{
+
+    transform:
+
+    translateY(-4px)
+
+    scale(1.04);
+
+    box-shadow:
+
+    0 18px 42px rgba(229,9,20,.45);
+
+}
+
+/* ========================================================== */
+
+.resume-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:40%;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transition:left .8s;
+
+}
+
+.resume-btn:hover::before{
+
+    left:170%;
+
+}
+
+/* ==========================================================
+                NAVBAR HOVER EFFECT
+========================================================== */
+
+.navbar:hover{
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.55),
+
+    0 0 45px rgba(229,9,20,.10);
+
+}
+
+/* ==========================================================
+                SOFT FLOAT ANIMATION
+========================================================== */
+
+@keyframes floatNav{
+
+0%{
+
+transform:
+
+translateX(-50%)
+
+translateY(0);
+
+}
+
+50%{
+
+transform:
+
+translateX(-50%)
+
+translateY(-2px);
+
+}
+
+100%{
+
+transform:
+
+translateX(-50%)
+
+translateY(0);
+
+}
+
+}
+
+.glass-nav{
+
+    animation:
+
+    navbarEnter .8s ease,
+
+    floatNav 6s ease-in-out infinite;
+
+}
+/* ==========================================================
+                    MOBILE MENU BUTTON
+========================================================== */
+
+.menu-btn{
+
+    display:none;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:16px;
+
+    color:#fff;
+
+    font-size:28px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.menu-btn:hover{
+
+    background:var(--primary);
+
+    transform:rotate(90deg);
+
+}
+
+/* ==========================================================
+                    MOBILE MENU
+========================================================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:115px;
+
+    left:50%;
+
+    transform:
+
+    translateX(-50%)
+
+    translateY(-30px);
+
+    width:min(92%,420px);
+
+    padding:22px;
+
+    border-radius:28px;
+
+    background:rgba(10,10,10,.85);
+
+    backdrop-filter:blur(25px);
+
+    -webkit-backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.45s;
+
+    z-index:999;
+
+}
+
+.mobile-menu.open{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+
+    translateX(-50%)
+
+    translateY(0);
+
+}
+
+.mobile-menu div{
+
+    color:#fff;
+
+    padding:16px 20px;
+
+    margin-bottom:10px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.mobile-menu div:hover{
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-light)
+
+    );
+
+    transform:translateX(8px);
+
+}
+
+.mobile-resume{
+
+    margin-top:10px;
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--primary-light)
+
+    );
+
+    color:#fff;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.mobile-resume:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+@media(max-width:1100px){
+
+.nav-links{
+
+gap:4px;
+
+}
+
+.nav-links li{
+
+padding:12px 16px;
+
+font-size:14px;
+
+}
+
+.resume-btn{
+
+padding:14px 22px;
+
+}
+
+}
+
+@media(max-width:920px){
+
+.nav-links{
+
+display:none;
+
+}
+
+.resume-btn{
+
+display:none;
+
+}
+
+.menu-btn{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+.navbar{
+
+padding:0 22px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+height:72px;
+
+top:15px;
+
+width:94%;
+
+padding:0 18px;
+
+border-radius:22px;
+
+}
+
+.logo h2{
+
+font-size:28px;
+
+}
+
+.logo span{
+
+font-size:15px;
+
+letter-spacing:5px;
+
+margin-left:45px;
+
+}
+
+.mobile-menu{
+
+top:92px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.logo h2{
+
+font-size:24px;
+
+letter-spacing:3px;
+
+}
+
+.logo span{
+
+font-size:13px;
+
+margin-left:36px;
+
+letter-spacing:4px;
+
+}
+
+.menu-btn{
+
+width:46px;
+
+height:46px;
+
+font-size:24px;
+
+}
+
+}
+
+/* ==========================================================
+                    SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0d0d0d;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+
+180deg,
+
+var(--primary),
+
+var(--primary-light)
+
+);
+
+border-radius:50px;
+
+}

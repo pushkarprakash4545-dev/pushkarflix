@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background:#090909;
+
+    background-image:url("./assets/hero.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* every section */
+
+section{
+
+    scroll-margin-top:110px;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+::selection{
+
+    background:#E50914;
+
+    color:white;
+
+}*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#080808;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+            PERMANENT BACKGROUND
+========================================== */
+
+.site-background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-3;
+
+    background-image:url("./assets/hero.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    will-change:transform;
+
+    transform:translateZ(0);
+
+}
+
+/* ==========================================
+            DARK CINEMATIC OVERLAY
+========================================== */
+
+.site-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    linear-gradient(
+
+        to bottom,
+
+        rgba(0,0,0,.15),
+
+        rgba(0,0,0,.55),
+
+        rgba(0,0,0,.75)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+                WEBSITE
+========================================== */
+
+.site-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+            EVERY SECTION
+========================================== */
+
+section{
+
+    scroll-margin-top:110px;
+
+}
+
+/* ==========================================
+                IMAGES
+========================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/* ==========================================
+                BUTTONS
+========================================== */
+
+button{
+
+    font-family:inherit;
+
+}
+
+/* ==========================================
+                LINKS
+========================================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================================
+            TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#E50914;
+
+    color:white;
+
+}
+
+/* ==========================================
+            SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:9px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#E50914;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff3d46;
+
+}

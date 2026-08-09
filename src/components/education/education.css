@@ -1,0 +1,382 @@
+.education{
+
+    width:100%;
+
+    padding:100px 6%;
+
+    background:rgba(8,8,8,.45);
+
+    backdrop-filter:blur(2px);
+
+    position:relative;
+
+}
+
+.education-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* ======================= */
+
+.education-heading{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.education-heading span{
+
+    display:block;
+
+    color:#E50914;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:2.5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+}
+
+.education-heading h2{
+
+    color:#fff;
+
+    font-size:50px;
+
+    font-weight:800;
+
+    display:inline-block;
+
+    position:relative;
+
+}
+
+.education-heading h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-12px;
+
+    transform:translateX(-50%);
+
+    width:90px;
+
+    height:4px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #E50914,
+        #ff4b4b
+    );
+
+}
+
+.education-heading p{
+
+    color:#c5c5c5;
+
+    max-width:720px;
+
+    margin:30px auto 0;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+/* ======================= */
+
+.education-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* ======================= */
+
+.education-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(229,9,20,.12),
+        transparent 55%
+    ),
+    rgba(18,18,18,.78);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.45s;
+
+}
+
+.education-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #E50914,
+        #ff5555
+    );
+
+}
+
+.education-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.8s;
+
+}
+
+.education-card:hover::after{
+
+    left:150%;
+
+}
+
+.education-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#E50914;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.45),
+
+    0 0 25px rgba(229,9,20,.25);
+
+}
+
+/* ======================= */
+
+.education-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:24px;
+
+    background:rgba(229,9,20,.12);
+
+    color:#E50914;
+
+    font-size:30px;
+
+    border:1px solid rgba(229,9,20,.35);
+
+}
+
+/* ======================= */
+
+.education-card h3{
+
+    color:#fff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.education-card h4{
+
+    color:#E50914;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+/* ======================= */
+
+.education-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:22px;
+
+}
+
+.education-info span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#1f1f1f;
+
+    color:#fff;
+
+    padding:9px 18px;
+
+    border-radius:40px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    font-size:14px;
+
+    transition:.35s;
+
+}
+
+.education-card:hover .education-info span{
+
+    background:#E50914;
+
+    border-color:#E50914;
+
+}
+
+/* ======================= */
+
+.education-card p{
+
+    color:#c5c5c5;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ======================= */
+
+@media(max-width:992px){
+
+.education-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.education{
+
+padding:70px 20px;
+
+}
+
+.education-heading h2{
+
+font-size:36px;
+
+}
+
+.education-card{
+
+padding:28px;
+
+}
+
+.education-card h3{
+
+font-size:24px;
+
+}
+
+.education-info{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:12px;
+
+}
+
+.education-info span{
+
+text-align:center;
+
+}
+
+}
