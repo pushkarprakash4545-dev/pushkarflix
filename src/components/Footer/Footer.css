@@ -1,71 +1,220 @@
-.footer{
+.footer {
+    width: 100%;
 
-    width:100%;
+    padding: 45px 6%;
 
-    padding:45px 6%;
+    background: rgba(8, 8, 8, 0.75);
 
-    background:rgba(8,8,8,.75);
+    backdrop-filter: blur(2px);
 
-    backdrop-filter:blur(2px);
-
-    border-top:1px solid rgba(255,255,255,.08);
-
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-container{
+.footer-container {
+    width: 100%;
 
-    max-width:1400px;
+    max-width: 1400px;
 
-    margin:auto;
+    margin: auto;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    align-items:center;
+    align-items: center;
 
-    gap:25px;
+    gap: 25px;
 
+    text-align: center;
 }
 
-.footer-logo h2{
 
-    color:#E50914;
+/* =========================================
+   LOGO
+========================================= */
 
-    font-size:34px;
+.footer-logo h2 {
+    color: #E50914;
 
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
 }
 
-.footer-logo span{
-
-    color:white;
-
+.footer-logo span {
+    color: white;
 }
 
-.footer-logo p{
+.footer-logo p {
+    color: #999;
 
-    color:#999;
+    font-size: 14px;
 
+    line-height: 1.6;
+
+    margin: 0;
 }
 
-.footer-links{
 
-    display:flex;
+/* =========================================
+   FOOTER LINKS
+========================================= */
 
-    gap:30px;
+.footer-links {
+    display: flex;
 
-    flex-wrap:wrap;
+    justify-content: center;
 
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
 }
 
-.footer-links a{
+.footer-links a {
+    color: white;
 
-    color:white;
+    text-decoration: none;
 
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.footer-copy{
+.footer-links a:hover {
+    color: #E50914;
 
-    color:#888;
+    transform: translateY(-2px);
+}
 
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.footer-copy {
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 40px 25px;
+    }
+
+    .footer-logo h2 {
+        font-size: 30px;
+    }
+
+    .footer-logo p {
+        font-size: 13px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .footer-copy {
+        font-size: 12px;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .footer {
+        padding: 35px 18px;
+    }
+
+    .footer-container {
+        gap: 20px;
+    }
+
+    .footer-logo h2 {
+        font-size: 27px;
+    }
+
+    .footer-logo p {
+        max-width: 280px;
+
+        margin: auto;
+
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
+
+    .footer-links {
+        width: 100%;
+
+        gap: 12px 20px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-copy {
+        max-width: 300px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 360px) {
+
+    .footer {
+        padding-left: 15px;
+
+        padding-right: 15px;
+    }
+
+    .footer-logo h2 {
+        font-size: 24px;
+    }
+
+    .footer-logo p {
+        font-size: 11px;
+    }
+
+    .footer-links {
+        gap: 10px 16px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .footer-copy {
+        font-size: 10px;
+    }
 }

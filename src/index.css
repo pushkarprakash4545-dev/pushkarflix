@@ -1,239 +1,242 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Poppins",sans-serif;
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
 }
 
-html{
 
-    scroll-behavior:smooth;
+/* =========================================
+   HTML
+========================================= */
 
+html {
+    scroll-behavior: smooth;
+
+    width: 100%;
+
+    overflow-x: hidden;
 }
 
-body{
 
-    color:white;
+/* =========================================
+   BODY
+========================================= */
 
-    overflow-x:hidden;
+body {
+    width: 100%;
+    min-width: 0;
 
-    background:#090909;
+    background: #080808;
 
-    background-image:url("./assets/hero.png");
+    color: white;
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
+    overflow-x: hidden;
 }
 
-/* every section */
 
-section{
+/* =========================================
+   ROOT
+========================================= */
 
-    scroll-margin-top:110px;
+#root {
+    width: 100%;
+    min-width: 0;
 
+    overflow-x: hidden;
 }
 
-img{
 
-    max-width:100%;
+/* =========================================
+   WEBSITE CONTENT
+========================================= */
 
-    display:block;
+.site-content {
+    position: relative;
 
+    z-index: 2;
+
+    width: 100%;
+
+    min-width: 0;
 }
 
-button{
 
-    font-family:inherit;
+/* =========================================
+   PERMANENT BACKGROUND
+========================================= */
 
+.site-background {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -3;
+
+    background-image: url("./assets/hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    pointer-events: none;
 }
 
-a{
 
-    text-decoration:none;
+/* =========================================
+   DARK CINEMATIC OVERLAY
+========================================= */
 
-}
+.site-overlay {
+    position: fixed;
 
-::selection{
+    inset: 0;
 
-    background:#E50914;
+    width: 100%;
+    height: 100%;
 
-    color:white;
+    z-index: -2;
 
-}*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Poppins",sans-serif;
-}
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-body{
-
-    background:#080808;
-
-    color:white;
-
-    overflow-x:hidden;
-
-}
-
-/* ==========================================
-            PERMANENT BACKGROUND
-========================================== */
-
-.site-background{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:-3;
-
-    background-image:url("./assets/hero.png");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-    will-change:transform;
-
-    transform:translateZ(0);
-
-}
-
-/* ==========================================
-            DARK CINEMATIC OVERLAY
-========================================== */
-
-.site-overlay{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:-2;
-
-    background:
-
-    linear-gradient(
-
+    background: linear-gradient(
         to bottom,
-
-        rgba(0,0,0,.15),
-
-        rgba(0,0,0,.55),
-
-        rgba(0,0,0,.75)
-
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.75)
     );
 
-    pointer-events:none;
-
+    pointer-events: none;
 }
 
-/* ==========================================
-                WEBSITE
-========================================== */
 
-.site-content{
+/* =========================================
+   SECTIONS
+========================================= */
 
-    position:relative;
+section {
+    width: 100%;
 
-    z-index:2;
+    max-width: 100%;
 
+    scroll-margin-top: 110px;
 }
 
-/* ==========================================
-            EVERY SECTION
-========================================== */
 
-section{
+/* =========================================
+   IMAGES
+========================================= */
 
-    scroll-margin-top:110px;
+img {
+    display: block;
 
+    max-width: 100%;
 }
 
-/* ==========================================
-                IMAGES
-========================================== */
 
-img{
+/* =========================================
+   BUTTONS
+========================================= */
 
-    display:block;
-
-    max-width:100%;
-
+button {
+    font-family: inherit;
 }
 
-/* ==========================================
-                BUTTONS
-========================================== */
 
-button{
+/* =========================================
+   LINKS
+========================================= */
 
-    font-family:inherit;
-
+a {
+    text-decoration: none;
 }
 
-/* ==========================================
-                LINKS
-========================================== */
 
-a{
+/* =========================================
+   TEXT SELECTION
+========================================= */
 
-    text-decoration:none;
+::selection {
+    background: #E50914;
 
+    color: white;
 }
 
-/* ==========================================
-            TEXT SELECTION
-========================================== */
 
-::selection{
+/* =========================================
+   SCROLLBAR
+========================================= */
 
-    background:#E50914;
-
-    color:white;
-
+::-webkit-scrollbar {
+    width: 9px;
 }
 
-/* ==========================================
-            SCROLLBAR
-========================================== */
-
-::-webkit-scrollbar{
-
-    width:9px;
-
+::-webkit-scrollbar-track {
+    background: #111;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-thumb {
+    background: #E50914;
 
-    background:#111;
-
+    border-radius: 50px;
 }
 
-::-webkit-scrollbar-thumb{
-
-    background:#E50914;
-
-    border-radius:50px;
-
+::-webkit-scrollbar-thumb:hover {
+    background: #ff3d46;
 }
 
-::-webkit-scrollbar-thumb:hover{
 
-    background:#ff3d46;
+/* ==================================================
+   MOBILE GLOBAL FIXES
+================================================== */
 
+@media (max-width: 768px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .site-background {
+        background-position: 60% center;
+
+        /*
+           Fixed backgrounds can behave badly
+           on mobile browsers, so keep the
+           background visually stable without
+           unnecessary GPU work.
+        */
+        background-attachment: scroll;
+    }
+
+    section {
+        scroll-margin-top: 90px;
+    }
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 480px) {
+
+    .site-background {
+        background-position: 65% center;
+    }
+
+    section {
+        scroll-margin-top: 80px;
+    }
 }
