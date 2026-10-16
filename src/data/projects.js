@@ -1,14 +1,14 @@
-import travel from "../assets/Projects/travel.png";
-import whatsapp from "../assets/Projects/whatsapp.png";
-import music from "../assets/Projects/music.png";
+import travel from "../assets/Projects/travel.webp";
+import whatsapp from "../assets/Projects/whatsapp.webp";
+import music from "../assets/Projects/music.webp";
 
-import spam from "../assets/Projects/spam.png";
-import qr from "../assets/Projects/qr.png";
-import pdf from "../assets/Projects/pdf.png";
+import spam from "../assets/Projects/spam.webp";
+import qr from "../assets/Projects/qr.webp";
+import pdf from "../assets/Projects/pdf.webp";
 
-import bmi from "../assets/Projects/bmi.png";
-import coin from "../assets/Projects/coin.png";
-import guess from "../assets/Projects/guess.png";
+import bmi from "../assets/Projects/bmi.webp";
+import coin from "../assets/Projects/coin.webp";
+import guess from "../assets/Projects/guess.webp";
 
 const projects = [
   {
